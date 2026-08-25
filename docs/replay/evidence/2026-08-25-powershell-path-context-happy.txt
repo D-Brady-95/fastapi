@@ -1,0 +1,28 @@
+﻿== HAPPY PATH EVIDENCE ==
+2026-08-25T15:49:41
+repo=C:\Users\DarrenBrady\fastapi
+
+== BOM rewrite output ==
+Rewrote without BOM: C:\Users\DarrenBrady\fastapi\sandbox\log_summariser\README.md
+Rewrote without BOM: C:\Users\DarrenBrady\fastapi\sandbox\log_summariser\app\main.py
+Rewrote without BOM: C:\Users\DarrenBrady\fastapi\sandbox\log_summariser\tests\test_get_summary.py
+Rewrote without BOM: C:\Users\DarrenBrady\fastapi\sandbox\log_summariser\tests\test_get_summary_independent.py
+Rewrote without BOM: C:\Users\DarrenBrady\fastapi\sessions\T1\isolated-test-paste-packet.txt
+Rewrote without BOM: C:\Users\DarrenBrady\fastapi\sessions\T1\session-log.md
+Rewrote without BOM: C:\Users\DarrenBrady\fastapi\reviews\T1\review.md
+
+== git diff --stat ==
+ reviews/T1/review.md                       | 24 ++++++++++++------------
+ sandbox/log_summariser/app/main.py         |  2 +-
+ sessions/T1/isolated-test-paste-packet.txt |  4 ++--
+ sessions/T1/session-log.md                 |  6 +++---
+ 4 files changed, 18 insertions(+), 18 deletions(-)
+
+== pytest gates ==
+python -m pytest -q sandbox/log_summariser/tests/test_get_summary.py
+.                                                                        [100%]
+1 passed in 0.33s
+
+python -m pytest -q sandbox/log_summariser/tests/test_get_summary_independent.py
+........                                                                 [100%]
+8 passed in 0.34s
